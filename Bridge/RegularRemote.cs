@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
-    public class PremiumRemote : BaseRemote
+    public class RegularRemote : BaseRemote
     {
-        public PremiumRemote(IDevice device) : base(device)
+        public RegularRemote(IDevice device) : base(device)
         {
         }
 
@@ -25,11 +25,6 @@ namespace Bridge
         public override void VolumeUp()
         {
             _device.SetVolume(_device.GetVolume() + 1);
-        }
-
-        public void Mute()
-        {
-            _device.SetVolume(0);
         }
     }
 }
